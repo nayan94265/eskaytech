@@ -11,6 +11,7 @@ function App() {
     <div className="App">
 
      <Router>
+       <p>hiiiii</p>
         <Header/>
         <Switch>
           <Route exact path="/">
