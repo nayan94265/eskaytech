@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import ImgSlider from './ImgSlider';
 import {Link} from 'react-router-dom'
+import TopClients from './TopClients';
+import Footer from './Footer';
 
 const Home = () => {
     return (
@@ -15,61 +17,69 @@ const Home = () => {
 We provide high-quality services to our customers which meet their expectations. With our exclusive painting services, we add beauty to your interiors and exteriors. We have excellent team of professionals who are highly dedicated in providing the best services to our customers. Our professionals always focus on offering remarkable solutions to a huge number of clients. We render.</p>
 
         </Content>
+        <TopClients/>
             <Content1>
             
             <Wrap>
-            <Link>
-               <p>Jacketing</p>
-               </Link>
+               <Box>
+               <span>Jacketing</span>
+               </Box>
             </Wrap>
            
-           
+            <Wrap>
+              
+            <Box>
+               <span>Plumbing</span>
+               </Box>
+              
+            </Wrap>
+
+            <Wrap>
             
-            <Wrap>
-              <Link >
-              <p>Plumbing</p>
-              </Link>
+            <Box>
+               <span>Plastering</span>
+               </Box>
+              
             </Wrap>
 
             <Wrap>
-              <Link>
-              <p>Plastering</p>
-              </Link>
-            </Wrap>
-
-            <Wrap>
-              <Link >
-              <p>Flooring</p>
-              </Link>
+              
+            <Box>
+               <span>Flooring</span>
+               </Box>
+              
             </Wrap>
             <Wrap>
-              <Link>
-              <p>Water Proofing</p>
-              </Link>
+            
+            <Box>
+               <span>Structure Repair</span>
+               </Box>
+              
             </Wrap>
             <Wrap>
-              <Link>
-              <p>Electric work</p>
-              </Link>
+            
+            <Box>
+               <span>Water Proofing</span>
+               </Box>
+              
             </Wrap>
             <Wrap>
-              <Link>
-              <p>Painting</p>
-              </Link>
+            
+            <Box>
+               <span>Electric Work</span>
+               </Box>
+              
             </Wrap>
             <Wrap>
-              <Link>
-              <p>Structure Repair</p>
-              </Link>
+            
+            <Box>
+               <span>Painting</span>
+               </Box>
+              
             </Wrap>
-
-
             </Content1>
-       
-
-
-        <img/>
     </Container>
+   
     
     );
 }
@@ -79,21 +89,21 @@ We provide high-quality services to our customers which meet their expectations.
 const Container = styled.div`
 
 position: relative;
-min-height: calc(100vh - 250px);
+  min-height: calc(100vh - 250px);
   overflow-x: hidden;
   display: block;
-  top: 72px;
-  padding: 0 calc(3.5vw + 5px);
 
+  top: 72px;
+  padding: 10px calc(2vw + 5px);
+  margin-bottom:90px;
+  
   &:after {
-    background: url("/images/home-background.png") center center / cover
-      no-repeat fixed;
     content: "";
     position: absolute;
     inset: 0px;
     opacity: 1;
-    z-index: -1;
-  }
+    z-index: -1; 
+  } 
 `;
 
 const Content = styled.div`
@@ -115,7 +125,7 @@ h3{
     font-family: Garamond, serif;
 }
 p{
-    margin: 0;
+  margin: 0;
   line-height: 1.5;
   letter-spacing: 1.5px;
   padding:5px;
@@ -130,6 +140,8 @@ const Content1 = styled.div`
   display: grid;
   grid-gap: 25px;
   gap: 25px;
+  overflow:hidden;
+ margin:auto;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top:25px;
   @media (max-width: 768px) {
@@ -138,7 +150,7 @@ const Content1 = styled.div`
 `;
 
 const Wrap = styled.div`
-  padding-top: 56.25%;
+  padding: 20%;
   border-radius: 10px;
   /* box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px; */
@@ -149,14 +161,9 @@ const Wrap = styled.div`
   transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   border: 3px solid rgba(249, 249, 249, 0.1);
   opacity: 2.5;
-  a{
-      
-      font-size:25px;
-      text-align:center;
-      text-decoration:none;
-      color:black;
-      
-  }
+  overflow:hidden;
+  text-decoration:none;
+ 
  
   &:hover {
     box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
@@ -165,4 +172,31 @@ const Wrap = styled.div`
     border-color: rgba(249, 249, 249, 0.8);
   }
 `;
+
+
+const Box = styled.div`
+padding:auto;
+margin: auto;
+display:flex;
+justify-content: center;
+
+span{
+      
+      font-size:30px;
+      text-align:center;
+      text-decoration:none;
+      color:black;
+      padding-left:10px;
+      @media (max-width: 768px) {
+        font-size:18px;
+  }
+
+
+      
+      
+  }
+
+`;
+
+
 export default Home;

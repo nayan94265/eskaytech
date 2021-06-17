@@ -23,7 +23,7 @@ const ImgSlider =()=>{
         <Carousel {...settings}>
          <Wrap>
           <a>
-           <img src="https://source.unsplash.com/700x180/?construction,building" alt="" />
+           <img src="https://source.unsplash.com/700x180/?construction" alt="" />
           </a>
           </Wrap>
           <Wrap>
@@ -33,7 +33,7 @@ const ImgSlider =()=>{
           </Wrap>
           <Wrap>
           <a>
-           <img src="https://source.unsplash.com/700x180/?construction,building" alt="" />
+           <img src="https://source.unsplash.com/700x180/?building,painting" alt="" />
           </a>
           </Wrap>
           
@@ -48,10 +48,10 @@ const ImgSlider =()=>{
 
 
 const Carousel = styled(Slider)`
-  margin-top: 20px;
+  margin-top: 80px;
   & > button {
     opacity: 0;
-    height: 100%;
+    height: 120%;
     width: 5vw;
     z-index: 1;
     &:hover {
@@ -84,10 +84,11 @@ const Wrap = styled.div`
   border-radius: 4px;
   cursor: pointer;
   position: relative;
+
   a {
     border-radius: 4px;
-    /* box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
-      rgb(0 0 0 / 73%) 0px 16px 10px -10px; */
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+      rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     cursor: pointer;
     display: block;
     position: relative;

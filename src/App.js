@@ -4,6 +4,7 @@ import Header from './Header'
 import About from './About'
 import Contact from './Contact'
 import Home from './Home'
+import Footer from './Footer';
 
 
 function App() {
@@ -11,7 +12,6 @@ function App() {
     <div className="App">
 
      <Router>
-       <p>hiiiii</p>
         <Header/>
         <Switch>
           <Route exact path="/">
@@ -24,6 +24,7 @@ function App() {
             <Contact/>
           </Route>
         </Switch>
+        <Footer/>
       </Router>
     
     </div>

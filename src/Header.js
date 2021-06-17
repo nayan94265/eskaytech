@@ -24,9 +24,9 @@ const Header = () => {
     return (
         <Container>
            
-        {/* <Logo>
-          <img src="/Images/amazon.png" alt="Disney+" />
-        </Logo> */}
+        <Logo>
+          <img src="/Images/eskaylogo.jpeg" alt="Eskay" />
+        </Logo>
 
         <Navimg
          aria-controls="simple-menu"
@@ -40,45 +40,33 @@ const Header = () => {
         anchorEl={anchorEl}
         onClose={handleClose}
         open={Boolean(anchorEl)}
+        
       >
-        <MenuItem><Link to="/"><p style={{textDecoration:'none'}}>Home</p></Link></MenuItem>
-        <MenuItem><Link to="/about">About Us</Link></MenuItem>
-        <MenuItem><Link to="/">Staff Profile</Link></MenuItem>
-        <MenuItem><Link to="/">Services</Link></MenuItem>
-        <MenuItem><Link to="/">Projects</Link></MenuItem>
-        <MenuItem><Link to="/">Safety Precautions & Training</Link></MenuItem>
-        <MenuItem><Link to="/contact">Contact Us</Link></MenuItem>
+        <MenuItem><Link to="/" style={{ textDecoration: 'none',color:'black' }}><p>Home</p></Link></MenuItem>
+        <MenuItem><Link to="/about" style={{ textDecoration: 'none',color:'black'  }}>About Us</Link></MenuItem>
+        <MenuItem><Link to="/" style={{ textDecoration: 'none',color:'black'  }}>Our Top Clients</Link></MenuItem>
+        <MenuItem><Link to="/" style={{ textDecoration: 'none',color:'black'  }}>Services</Link></MenuItem>
+        <MenuItem><Link to="/contact" style={{ textDecoration: 'none',color:'black'  }}>Contact Us</Link></MenuItem>
        
       </Menu>
 
             <NavMenu>
-
-              
-              
               <a>
                 <span>Home</span>
               </a>
              
-              <a>
-                
+              <a> 
                 <span>About Us</span>
               </a>
               <a>
                 
-                <span>Staff Profile</span>
+                <span>Our Top Clients</span>
               </a>
               <a>
                
                 <span>Services</span>
               </a>
-              <a>
-                
-                <span>Projects</span>
-              </a>
-              <a>
-                
-                <span>Safety Precaution & Training</span>
-              </a>
+            
               <a>
                 
                 <span>Contact Us</span>
@@ -97,16 +85,16 @@ position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 70px;
+  height: 150px;
 
-  /* background-color: #090b13; */
-  background-color:whitesmoke;
+  background-color:white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 36px;
   letter-spacing: 16px;
   z-index: 3;
+  /* border-bottom:1px solid black; */
 `;
 
 
@@ -120,9 +108,11 @@ const NavMenu = styled.div`
   justify-content: flex-end;
   margin: 0px;
   padding: 0px;
+  margin-top:10px;
   position: relative;
   margin-right: auto;
   margin-left: 25px;
+  padding-left:60px;
   a {
     display: flex;
     align-items: center;
@@ -137,7 +127,7 @@ const NavMenu = styled.div`
     span {
       /* color: rgb(249, 249, 249); */
       color:black;
-      font-size: 13px;
+      font-size: 18px;
       letter-spacing: 1.42px;
       line-height: 1.08;
       padding: 2px 0px;
@@ -179,11 +169,17 @@ const NavMenu = styled.div`
 
 const Logo = styled.a`
   padding: 0;
-  width: 80px;
-  margin-top: 4px;
-  max-height: 70px;
+  width: 250px;
+
+  margin-top: 15px;
+  top:0;
+  /* max-height: 70px; */
   font-size: 0;
   display: inline-block;
+  
+@media (max-width: 768px) {
+ left:0;
+  }
   img {
     display: block;
     width: 100%;
@@ -191,11 +187,15 @@ const Logo = styled.a`
 `;
 
 const Navimg=styled.div`
+visibility: hidden;
+position: absolute;
+right: 0px;
+padding-right:6px;
+margin-right:5px;
 
-opacity: 0;
 
 @media (max-width: 768px) {
-    opacity: 1;
+    visibility: visible;
   }
 
 `;
